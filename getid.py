@@ -13,7 +13,11 @@ token = getid_config.token
 if len(sys.argv) == 1:
     print('Error: missing short name.')
 else:
-    userid = sys.argv[1]
+    link = sys.argv[1]
+    if 'vk.com' in link:
+        userid = link.split('/')[-1]
+    else:
+        userid = link
     r = api.users.get(access_token = token, user_ids = userid)
     id = r[0]['id']
     print(id)
