@@ -6,7 +6,7 @@ import getid_config
 
 
 session = vk.Session()
-api = vk.API(session, v = 5.102)
+api = vk.API(session, v = 5.103)
 token = getid_config.token
 
 
